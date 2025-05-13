@@ -3,6 +3,11 @@ import './home.scss'
 import video from '../../Assets/reflexion.mp4'
 import { GrLocation } from "react-icons/gr";
 import { HiFilter } from "react-icons/hi";
+import { FiFacebook } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
+import { CiCircleList } from "react-icons/ci";
+import { TbApps } from "react-icons/tb";
 
 const Home = () => {
   return (
@@ -51,6 +56,18 @@ const Home = () => {
           <div className="searchOptions flex">
             <HiFilter  className="icon" />
             <span>MORE FILTERS</span>
+          </div>
+        </div>
+
+        <div className="homeFooterIcons flex">
+          <div className="rigthIcons">
+            <FiFacebook  className="icon"/>
+            <FaInstagram className="icon"/>
+            <FaTiktok  className='icon'/>
+          </div>
+          <div className="leftIcons">
+            <CiCircleList className='icon'/>
+            <TbApps className='icon'/>
           </div>
         </div>
       </div>
