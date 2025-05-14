@@ -1,9 +1,15 @@
 import React from 'react'
 import './main.scss'
-import img from '../../Assets/dog.jpeg'
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { LuClipboardCheck } from "react-icons/lu";
+
+import img from '../../Assets/cuidadora.jpeg'
+import img1 from '../../Assets/rescate.jpg'
+import img2 from '../../Assets/hospitalizar.webp'
+import img3 from '../../Assets/niña.jpg'
+import img4 from '../../Assets/domicilio.jpeg'
+import img5 from '../../Assets/exotico.jpg'
 
 
 const Data =[
@@ -18,7 +24,7 @@ const Data =[
   },
   {
     id: 2,
-    imgSrc: img,
+    imgSrc: img1,
     destTitle: 'VetSalud Integral',
     location: 'Ciudad de México',
     grade: 'MEDICINA PREVENTIVA',
@@ -27,7 +33,7 @@ const Data =[
   },
   {
     id: 3,
-    imgSrc: img,
+    imgSrc: img2,
     destTitle: 'Centro Veterinario El Refugio',
     location: 'Ciudad de México',
     grade: 'HOSPITALIZACIÓN Y CIRUGÍA',
@@ -36,7 +42,7 @@ const Data =[
   },
   {
     id: 4,
-    imgSrc: img,
+    imgSrc: img3,
     destTitle: 'Vet Estética y Spa Animalia',
     location: 'Ciudad de México',
     grade: 'ESTÉTICA Y BIENESTAR',
@@ -45,20 +51,20 @@ const Data =[
   },
   {
     id: 5,
-    imgSrc: img,
+    imgSrc: img4,
     destTitle: 'VetMóvil Express',
     location: 'Ciudad de México',
     grade: 'SERVICIO A DOMICILIO',
     fees: 'Desde $400',
     description: 'Veterinarios certificados que acuden a tu hogar para consultas, vacunación y tratamientos básicos. Ideal para mascotas nerviosas.'
   },
-  {
-    id: 6,
-    imgSrc: img,
+    {
+      id: 6,
+    imgSrc: img5,
     destTitle: 'Exóticos MX Vet',
     location: 'Ciudad de México',
     grade: 'ANIMALES EXÓTICOS',
-    fees: 'Desde $500',
+    fees: 'Desde $2000',
     description: 'Especialistas en aves, reptiles y pequeños mamíferos. Diagnósticos precisos y cuidados específicos para animales no convencionales.'
   }
 ]
