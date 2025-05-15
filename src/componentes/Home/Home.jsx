@@ -26,15 +26,15 @@ const Home = () => {
 
       <div className='homeContent container'>
         <div className="textDiv">
-          <span className="smallText">
+          <span data-aos="fade-up" className="smallText">
             We heal. We protect. We care.
           </span>
-          <h1 className="homeTitle">
+          <h1 data-aos="fade-up" className="homeTitle">
             Lifesaving care for those who love unconditionally
           </h1>
         </div>
 
-        <div className="carDiv grid">
+        <div data-aos="fade-up" className="carDiv grid">
           <div className="destinationInput">
             <label htmlFor="service">Choose a service:</label>
             <div className="input flex">
@@ -67,7 +67,7 @@ const Home = () => {
         </div>
 
 
-        <div className="homeFooterIcons flex">
+        <div data-aos="fade-up" className="homeFooterIcons flex">
           <div className="rigthIcons">
             <FiFacebook  className="icon"/>
             <FaInstagram className="icon"/>

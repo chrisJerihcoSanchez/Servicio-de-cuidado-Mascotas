@@ -1,4 +1,4 @@
-import React from 'react'
+import React,  { useEffect } from 'react'
 import './footer.scss'
 import video from '../../Assets/killa.mp4'
 
@@ -10,10 +10,17 @@ import { FaTelegram } from "react-icons/fa6";
 import { FiYoutube } from "react-icons/fi";
 import { FiChevronsRight } from "react-icons/fi";
 
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const Footer = () => {
+
+     useEffect(()=>{
+      Aos.init({duration: 2000})
+    },[])
+
+
   return (
     <section className="footer">
 
@@ -23,16 +30,16 @@ const Footer = () => {
 
       <div className="secContent container">
         <div className="contacDiv flex">
-          <div className="text">
+          <div data-aos="fade-up" className="text">
             <small>STAY CONNECTED</small>
             <h2>We care for your pets</h2>
           </div>
 
 
           <div className="inputDiv flex">
-            <input type="text" placeholder='Enter Email 
+            <input data-aos="fade-up" type="text" placeholder='Enter Email 
             Address'/>
-            <button className='btn flex' type='submit'>
+            <button data-aos="fade-up" className='btn flex' type='submit'>
                 SEND <FiSend  className='icon'/>
             </button>
           </div>
@@ -42,20 +49,20 @@ const Footer = () => {
         <div className="footerCard flex">
           <div className="footerIntro flex">
             <div className="logoDiv">
-              <a href="#" className='logo flex'>
+              <a data-aos="fade-right" href="#" className='logo flex'>
               <SiPetsathome  
               className='icon'/> PetCare.
               </a>
             </div>
 
-            <div className="footerParagraph">
+            <div data-aos="fade-up" className="footerParagraph">
               We are dedicated to providing compassionate
               and professional veterinary care for your pets. 
               From checkups to emergencies, your pet’s
               health is our priority.
             </div>
 
-            <div className="footerSocials flex">
+            <div data-aos="fade-up" className="footerSocials flex">
               <AiOutlineTwitter  className='icon'/>
               <FiYoutube   className='icon'/>
               <FaTelegram   className='icon'/>
@@ -66,7 +73,9 @@ const Footer = () => {
           <div className="footerLinks grid">
             {/*primer grupo*/}
 
-            <div className="linkGroup">
+            <div data-aos="fade-up"
+            data-aos-duration="3000"
+             className="linkGroup">
               <span className="groupTitle">
                 our clinic
               </span>
@@ -98,7 +107,9 @@ const Footer = () => {
   
             </div>
             {/*second group*/}
-            <div className="linkGroup">
+            <div data-aos="fade-up" 
+            data-aos-duration="4000"
+            className="linkGroup">
               <span className="groupTitle">
                 PARTNERS
               </span>
@@ -131,7 +142,9 @@ const Footer = () => {
             </div>
 
             {/*tree group*/} 
-            <div className="linkGroup">
+            <div data-aos="fade-up" 
+            data-aos-duration="5000"
+            className="linkGroup">
               <span className="groupTitle">
                 LAST MINUTE
               </span>
@@ -165,7 +178,7 @@ const Footer = () => {
 
           </div>
           
-          <div className="footerDiv flex">
+          <div data-aos-duration="4000" className="footerDiv flex">
             <small>BEST TRAVEL WEBSITE THEME</small>
             <small>COPYRIGHTS RESERVED - ISRATECH
               2025
