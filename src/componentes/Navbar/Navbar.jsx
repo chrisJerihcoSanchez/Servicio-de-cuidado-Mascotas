@@ -1,77 +1,77 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './navbar.scss';
 import { PiDogFill } from "react-icons/pi";
 import { IoMdCloseCircle } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
+import { Link } from 'react-router-dom'; // 👈 Importamos Link
 
 export const Navbar = () => {
-  const[active, setActive] = useState('navBar')
-  const showNav = ()=>{
-    setActive('navBar activeNavbar')
-  }
+  const [active, setActive] = useState('navBar');
 
-  const removeNavbar = ()=>{
-    setActive('navBar')
-  }
+  const showNav = () => {
+    setActive('navBar activeNavbar');
+  };
+
+  const removeNavbar = () => {
+    setActive('navBar');
+  };
 
   return (
     <section className='navBarSection'>
       <header className='header flex'>
-
         <div className="logoDiv">
-          <a href="#" className='logo flex'>
-            <h1> <PiDogFill  className="icon"/> Huellitas y Bigotes.</h1>
-          </a>
+          <Link to="/" className='logo flex'>
+            <h1><PiDogFill className="icon" /> Huellitas y Bigotes.</h1>
+          </Link>
         </div>
+
         <div className={active}>
           <ul className="navLists flex">
 
             <li className="navItem">
-              <a href="#" className='navLink'>HOME</a>
+              <Link to="/" className='navLink'>HOME</Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className='navLink'>Packages</a>
+              <Link to="/packages" className="navLink">Packages</Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className='navLink'>Shop</a>
+              <Link to="/shop" className='navLink'>Shop</Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className='navLink'>About</a>
+              <Link to="/about" className='navLink'>About</Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className='navLink'>Pages</a>
+              <Link to="/pages" className='navLink'>Pages</Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className='navLink'>News</a>
+              <Link to="/news" className='navLink'>News</Link>
             </li>
 
             <li className="navItem">
-              <a href="#" className='navLink'>Contact</a>
+              <Link to="/contact" className='navLink'>Contact</Link>
             </li>
 
             <button className='btn'>
-              <a href="#">BOOK NOW</a>
+              <Link to="/booking">BOOK NOW</Link>
             </button>
           </ul>
 
           <div onClick={removeNavbar} className="closeNavbar">
-            <IoMdCloseCircle className="icon"/>
+            <IoMdCloseCircle className="icon" />
           </div>
         </div>
 
-        <div onClick={showNav} 
-        className="toggleNavbar">
-          <TbGridDots className='icon'/>
+        <div onClick={showNav} className="toggleNavbar">
+          <TbGridDots className='icon' />
         </div>
-
       </header>
     </section>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
