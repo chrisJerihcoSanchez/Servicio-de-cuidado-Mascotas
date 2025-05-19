@@ -6,7 +6,8 @@ import Navbar from './componentes/Navbar/Navbar';
 import Main from './componentes/Main/Main';
 import Footer from './componentes/Footer/Footer';
 import Home from './componentes/Home/Home';
-import PackagesPage from './packages/Packages'; // ← Importar desde src/packages
+import Packages from './packages/Packages';
+import Contac from './Contac/Contact'
 
 export const App = () => {
   return (
@@ -22,7 +23,13 @@ export const App = () => {
         } />
         <Route path="/packages" element={
           <>
-            <PackagesPage />
+            <Packages />
+            <Footer />
+          </>
+        } />
+        <Route path="/contact" element={
+          <>
+            <Contac />
             <Footer />
           </>
         } />
@@ -30,5 +37,7 @@ export const App = () => {
     </Router>
   );
 };
+
+
 
 export default App;
